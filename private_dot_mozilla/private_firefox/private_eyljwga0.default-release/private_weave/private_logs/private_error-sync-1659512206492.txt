@@ -1,0 +1,40 @@
+1659512012990	Sync.LogManager	DEBUG	Flushing file log
+1659512012997	Sync.LogManager	DEBUG	Log cleanup threshold time: 1658648012997
+1659512013007	Sync.LogManager	DEBUG	Done deleting files.
+1659512194058	Sync.Service	DEBUG	User-Agent: Firefox/102.0 (Linux x86_64) FxSync/1.104.0.20220623063721.desktop
+1659512194058	Sync.Service	INFO	Starting sync at 2022-08-03 09:36:34 in browser session 2McaBsTe54mu
+1659512194058	Sync.Service	DEBUG	In sync: should login.
+1659512194058	Sync.Service	INFO	User logged in successfully - verifying login.
+1659512194059	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1659512194059	FirefoxAccounts	DEBUG	getOAuthToken enter
+1659512194059	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1659512194059	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1659512194059	Sync.SyncAuthManager	DEBUG	unlockAndVerifyAuthState already has (or can fetch) sync keys
+1659512194059	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1659512194060	Sync.Status	DEBUG	Status.login: error.login.reason.network => success.status_ok
+1659512194060	Sync.Status	DEBUG	Status.service: error.login.failed => error.login.failed
+1659512194060	Sync.Service	DEBUG	Fetching unlocked auth state returned success.status_ok
+1659512194061	Sync.SyncAuthManager	INFO	Getting sync key
+1659512194061	Sync.SyncAuthManager	INFO	Getting a sync token from: https://token.services.mozilla.com/1.0/sync/1.5
+1659512194061	Sync.SyncAuthManager	DEBUG	Getting a token using OAuth
+1659512194061	FirefoxAccounts	DEBUG	getOAuthToken enter
+1659512194061	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1659512194062	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1659512194062	Services.Common.TokenServerClient	DEBUG	Beginning OAuth token exchange: https://token.services.mozilla.com/1.0/sync/1.5
+1659512194062	Services.Common.RESTRequest	DEBUG	GET request to https://token.services.mozilla.com/1.0/sync/1.5
+1659512206489	Services.Common.RESTRequest	DEBUG	GET https://token.services.mozilla.com/1.0/sync/1.5 failed: 2147500036 - NS_ERROR_ABORT
+1659512206490	Sync.SyncAuthManager	ERROR	Non-authentication error in _fetchTokenForUser: TokenServerClientNetworkError({"error":{}})(resource://services-common/tokenserverclient.js:39:36) JS Stack trace: TokenServerClientNetworkError@tokenserverclient.js:62:16
+_tokenServerExchangeRequest@tokenserverclient.js:241:13
+1659512206490	Sync.Status	DEBUG	Status.login: success.status_ok => error.login.reason.network
+1659512206490	Sync.Status	DEBUG	Status.service: error.login.failed => error.login.failed
+1659512206490	Sync.SyncAuthManager	INFO	Failed to fetch the cluster URL: TokenServerClientNetworkError({"error":{}})(resource://services-common/tokenserverclient.js:39:36) JS Stack trace: TokenServerClientNetworkError@tokenserverclient.js:62:16
+_tokenServerExchangeRequest@tokenserverclient.js:241:13
+1659512206490	Sync.Service	DEBUG	verifyLogin failed: TokenServerClientNetworkError({"error":{}})(resource://services-common/tokenserverclient.js:39:36) JS Stack trace: TokenServerClientNetworkError@tokenserverclient.js:62:16
+_tokenServerExchangeRequest@tokenserverclient.js:241:13
+1659512206490	Sync.Status	DEBUG	Status.login: error.login.reason.network => error.login.reason.network
+1659512206490	Sync.Status	DEBUG	Status.service: error.login.failed => error.login.failed
+1659512206490	Sync.ErrorHandler	ERROR	Sync encountered a login error
+1659512206490	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1659512206491	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1659512206491	Sync.Service	DEBUG	Exception calling WrappedLock: Error: Login failed: error.login.reason.network(resource://services-sync/service.js:1037:15) JS Stack trace: onNotify@service.js:1037:15
+1659512206491	Sync.Service	DEBUG	Not syncing: login returned false.
