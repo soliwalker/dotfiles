@@ -1,0 +1,78 @@
+{
+	"name": "sanity-snippets",
+	"displayName": "Sanity.io snippets",
+	"publisher": "hdoro",
+	"description": "Speed up your Sanity.io development with snippets tailored for building schemas and desk structures ✨",
+	"version": "1.0.0",
+	"author": {
+		"email": "opensource@hdoro.dev",
+		"name": "Henrique Doro",
+		"url": "https://hdoro.dev"
+	},
+	"repository": "https://github.com/hdoro/sanity-snippets",
+	"icon": "media/icon.png",
+	"badges": [
+		{
+			"description": "Install on VS Code Marketplace",
+			"url": "https://vsmarketplacebadge.apphb.com/version-short/hdoro.sanity-snippets.svg?style=flat-square",
+			"href": "https://marketplace.visualstudio.com/items?itemName=hdoro.sanity-snippets"
+		}
+	],
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"Sanity.io",
+		"Headless CMS",
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/schema.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/schema.code-snippets"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/structure.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/structure.code-snippets"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/groq.code-snippets"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/groq.code-snippets"
+			},
+			{
+				"language": "groq",
+				"path": "./snippets/groq.code-snippets"
+			}
+		]
+	},
+	"scripts": {
+		"packageAndPublish": "vsce package && vsce publish"
+	},
+	"__metadata": {
+		"id": "f79182de-7710-42d1-a778-e5e2d3e53bbe",
+		"publisherId": "37fa05ef-3a0e-41cd-9f4c-8eb1a6189db5",
+		"publisherDisplayName": "hdoro",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1658591794401
+	}
+}

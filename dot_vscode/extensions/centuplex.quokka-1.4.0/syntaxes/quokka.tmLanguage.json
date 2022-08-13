@@ -1,0 +1,80 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Quokka",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#function"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#number"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.quokka",
+				"match": "\\b(if|while|for|package|else|include|return|and|or|not|elif|to|step|then|continue|break|end)\\b"
+			}]
+		},
+		"function": {
+			"patterns": [{
+				"name": "entity.name.function.quokka",
+				"match": "\\b(puts|insert|proc|int)\\b"
+			}]
+		},
+		"number": {
+			"patterns": [
+				{
+					"name": "constant.numeric.flightjas",
+					"match": "\\b(\\.|\\d)+\\b"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.flightjas",
+					"match": "//.*"
+				}
+			]
+		},
+		"invalid": {
+			"patterns": [
+				{
+					"name": "invalid",
+					"match": "\\b(porcodio)\\b"
+				}
+			]
+		},
+		"variable": {
+			"patterns": [{
+				"name": "entity.name.variable.quokka",
+				"match": "\\b(true|false|main)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.quokka",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.quokka",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.qk"
+}

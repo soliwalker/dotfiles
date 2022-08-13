@@ -1,0 +1,164 @@
+{
+	"name": "vscode-sanity",
+	"displayName": "Sanity.io",
+	"version": "0.1.4",
+	"license": "MIT",
+	"description": "Developer tools for applications powered by Sanity.io",
+	"author": "Sanity.io <hello@sanity.io>",
+	"publisher": "sanity-io",
+	"engines": {
+		"vscode": "^1.29.0"
+	},
+	"keywords": [
+		"vscode",
+		"visual studio code",
+		"sanity",
+		"groq"
+	],
+	"categories": [
+		"Programming Languages"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sanity-io/vscode-sanity.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sanity-io/vscode-sanity/issues"
+	},
+	"homepage": "https://github.com/sanity-io/vscode-sanity/blob/main/README.md",
+	"icon": "images/icon.png",
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "Sanity",
+			"properties": {
+				"sanity.useCodelens": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable GROQ codelens."
+				},
+				"sanity.useCDN": {
+					"type": "boolean",
+					"default": false,
+					"description": "Use APICDN for GROQ queries."
+				},
+				"sanity.openJSONFile": {
+					"type": "boolean",
+					"default": false,
+					"description": "Open query results in a new tab as an editable JSON file."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "sanity.executeGroq",
+				"title": "Execute GROQ query"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "sanity.executeGroq",
+					"when": "editorLangId == groq || editorLangId == plaintext"
+				}
+			]
+		},
+		"languages": [
+			{
+				"id": "groq",
+				"aliases": [
+					"GROQ",
+					"groq"
+				],
+				"extensions": [
+					".groq"
+				],
+				"configuration": "./language/language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "groq",
+				"scopeName": "source.groq",
+				"path": "./grammars/groq.json"
+			},
+			{
+				"injectTo": [
+					"source.js",
+					"source.ts",
+					"source.js.jsx",
+					"source.tsx",
+					"source.vue",
+					"source.svelte",
+					"source.php"
+				],
+				"scopeName": "inline.groq",
+				"path": "./grammars/groq.js.json",
+				"embeddedLanguages": {
+					"meta.embedded.block.groq": "groq"
+				}
+			},
+			{
+				"scopeName": "markdown.groq.codeblock",
+				"path": "./grammars/groq.md.json",
+				"injectTo": [
+					"text.html.markdown"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.block.groq": "javascript"
+				}
+			}
+		],
+		"keybindings": [
+			{
+				"command": "sanity.executeGroq",
+				"key": "ctrl+shift+g",
+				"mac": "ctrl+shift+g",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"dependencies": {
+		"@sanity/client": "^2.0.1",
+		"groq-js": "^0.1.8",
+		"line-number": "^0.1.0",
+		"osenv": "^0.1.5",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-jason": "^1.1.2",
+		"xdg-basedir": "^4.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^16.9.52",
+		"@types/react-dom": "^16.9.8",
+		"prettier": "^2.1.2",
+		"typescript": "^4.0.3",
+		"vsce": "^1.81.1",
+		"vscode": "^1.1.37"
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"vsce:package": "vsce package",
+		"env:source": "export $(cat .envrc | xargs)",
+		"vsce:publish": "sh publish.sh",
+		"upgrade-interactive": "npx npm-check -u"
+	},
+	"__metadata": {
+		"id": "e7579f4f-1ee8-44ec-8b4f-a5f8fcda9c0a",
+		"publisherId": "f8e8ca9a-0641-4b52-983e-85fe39f01748",
+		"publisherDisplayName": "Sanity.io",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1658591817759
+	}
+}

@@ -1,0 +1,71 @@
+{
+	"name": "quokka",
+	"publisher": "Centuplex",
+	"icon": "images/icon.png",
+	"displayName": "Quokka",
+	"description": "Support for Quokka",
+	"version": "1.4.0",
+	"engines": {
+		"vscode": "^1.64.0"
+	},
+	"viewsContainers": {
+		"activitybar": [
+			{
+				"id": "quokka-container",
+				"title": "Quokka Editor",
+				"icon": "image/container.svg"
+			}
+		]
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "quokka",
+				"extensions": [
+					".qk"
+				],
+				"aliases": [
+					"Quokka",
+					"quokka"
+				],
+				"configuration": "./language-configuration.json",
+				"icon": {
+					"light": "./images/icon.png",
+					"dark": "./images/icon.png"
+				}
+			}
+		],
+		"grammars": [
+			{
+				"language": "quokka",
+				"scopeName": "source.qk",
+				"path": "./syntaxes/quokka.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "quokka",
+				"path": "./snippets/quokka.json"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Biktoz/Quokka"
+	},
+	"dependencies": {},
+	"__metadata": {
+		"id": "83a7f95f-b33a-4c39-a3d5-4d69abdb5766",
+		"publisherId": "34e01aef-489e-47a9-bd38-038ec052414c",
+		"publisherDisplayName": "Centuplex",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1658591794724,
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false
+	}
+}

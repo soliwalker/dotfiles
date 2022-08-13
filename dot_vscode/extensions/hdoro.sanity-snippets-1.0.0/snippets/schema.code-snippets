@@ -1,0 +1,190 @@
+{
+  "Sanity Schema": {
+    "description": "Create a simple schema for the CMS (document, object or image)",
+    "prefix": "sanitySchema",
+    "body": [
+      "export default {",
+      "\tname: '${2:$TM_FILENAME_BASE}',",
+      "\ttitle: '${3:${TM_FILENAME_BASE/(^.)|([A-Z](?=[a-z]))/${1:/upcase}${2:+ }${2:/downcase}/g}}',",
+      "\ttype: '${1|document,object,image|}',",
+      "\tfields: [",
+      "\t\t$0",
+      "\t],",
+      "}"
+    ]
+  },
+  "Sanity Field": {
+    "description": "Add a field to a sanity object / document",
+    "prefix": "sanityFld",
+    "body": [
+      "{",
+      "\tname: '${1:name}',",
+      "\ttitle: '${2:${1/(^.)|([A-Z](?=[a-z]))/${1:/upcase}${2:+ }${2:/downcase}/g}}',",
+      "\ttype: '${3|block,boolean,date,datetime,file,geopoint,image,number,slug,string,text,url,yourOwnType™|}',",
+      "},"
+    ]
+  },
+  "Sanity Custom Description": {
+    "description": "Add a custom description to a field, document or object",
+    "prefix": "sanityDesc",
+    "body": ["description: '${1:description}',"]
+  },
+  "Sanity Optional": {
+    "description": "Add a cue that a field is optional",
+    "prefix": "sanityOptional",
+    "body": ["description: '${1:❓ Optional}${0}',"]
+  },
+  "Sanity Optional Encouraged": {
+    "description": "Add a cue that a field is optional, but encourage writing it",
+    "prefix": "sanityOptionalEncouraged",
+    "body": ["description: '${1:⚡ Optional but highly encouraged}${0}',"]
+  },
+  "Sanity Tip description": {
+    "description": "Add a tip as a field's description",
+    "prefix": "sanityTip",
+    "body": ["description: '💡 ${1:tip here}',"]
+  },
+  "Sanity Fieldset": {
+    "description": "Add fieldsets to a sanity object / document",
+    "prefix": "sanityFieldset",
+    "body": [
+      "fieldsets: [",
+      "\t{",
+      "\t\tname: '${1:name}',",
+      "\t\ttitle: '${2:${1/(^.)|([A-Z](?=[a-z]))/${1:/upcase}${2:+ }${2:/downcase}/g}}',",
+      "\t\t${0:options: { collapsible: true, collapsed: true }},",
+      "\t},",
+      "],"
+    ]
+  },
+  "Sanity Collapse Field": {
+    "description": "Make a given object field collapsible to help editors scroll less through the document",
+    "prefix": "sanityCollapse",
+    "body": ["options: { collapsible: true, ${0:collapsed: false,}},"]
+  },
+  "Sanity Required": {
+    "description": "Make a given field required",
+    "prefix": "sanityRequired",
+    "body": ["validation: Rule => Rule.required(),"]
+  },
+  "Sanity Array Validation (min & max)": {
+    "description": "Validate an array field based on its length",
+    "prefix": "sanityArrValidation",
+    "body": [
+      "validation: Rule => [",
+      "\tRule.required()",
+      "\t\t.min(${1:1})",
+      "\t\t.max(${2:2})",
+      "\t\t.${4:error}('Required field with at least ${1:1} and at most ${2:2} ${3:entries}.'),",
+      "\t${0:Rule.unique()}",
+      "]"
+    ]
+  },
+  "Sanity Basic Array": {
+    "description": "Create a basic array field in Sanity",
+    "prefix": "sanityArrFld",
+    "body": [
+      "{",
+      "\tname: '${1:name}',",
+      "\ttitle: '${2:${1/(^.)|([A-Z](?=[a-z]))/${1:/upcase}${2:+ }${2:/downcase}/g}}',",
+      "\ttype: 'array',",
+      "\tof: [{ type: '${3:string}' }],",
+      "},"
+    ]
+  },
+  "Sanity Reference Field": {
+    "description": "Create a basic reference field in Sanity",
+    "prefix": "sanityRefFld",
+    "body": [
+      "{",
+      "\tname: '${1:name}',",
+      "\ttitle: '${2:${1/(^.)|([A-Z](?=[a-z]))/${1:/upcase}${2:+ }${2:/downcase}/g}}',",
+      "\ttype: 'reference',",
+      "\tto: [{ type: '${3:author}' }],",
+      "},"
+    ]
+  },
+  "Sanity Preview with Select": {
+    "description": "Add a basic preview with selection object in Sanity",
+    "prefix": "sanityPreviewSelect",
+    "body": [
+      "preview: {",
+      "\tselect: {",
+      "\t\ttitle: '${1:title}',",
+      "\t\tsubtitle: '${2:subtitle}',",
+      "\t\tmedia: '${3:image}',",
+      "\t},",
+      "},"
+    ]
+  },
+  "Sanity Select Object": {
+    "description": "Add a basic selection object for preview in Sanity",
+    "prefix": "sanitySelect",
+    "body": [
+      "\tselect: {",
+      "\t\ttitle: '${1:title}',",
+      "\t\tsubtitle: '${2:subtitle}',",
+      "\t\tmedia: '${3:image}',",
+      "\t},"
+    ]
+  },
+  "Sanity Prepare Function": {
+    "description": "Add a prepare function for preview in Sanity",
+    "prefix": "sanityPrepare",
+    "body": [
+      "prepare({ title, subtitle, media }) {",
+      "\treturn {",
+      "\t\ttitle: `${1:${title\\}}`,",
+      "\t\tsubtitle: `${2:${subtitle\\}}`,",
+      "\t\tmedia,",
+      "\t};",
+      "},"
+    ]
+  },
+  "Sanity Preview with Select and Prepare": {
+    "description": "Add a preview with selection object and prepare function in Sanity",
+    "prefix": "sanityPreviewSelectPrepare",
+    "body": [
+      "preview: {",
+      "\tselect: {",
+      "\t\ttitle: '${1:title}',",
+      "\t\tsubtitle: '${2:subtitle}',",
+      "\t\tmedia: '${3:image}',",
+      "\t},",
+      "\tprepare({ title, subtitle, media }) {",
+      "\t\treturn {",
+      "\t\t\ttitle: `${4:\\${title\\}}`,",
+      "\t\t\tsubtitle: `${5:\\${subtitle\\}}`,",
+      "\t\t\tmedia,",
+      "\t\t};",
+      "\t},",
+      "},"
+    ]
+  },
+  "Sanity Object Field": {
+    "description": "Create a basic object field in Sanity",
+    "prefix": "sanityObjFld",
+    "body": [
+      "{",
+      "\tname: '${1:name}',",
+      "\ttitle: '${2:title}',",
+      "\ttype: 'object',",
+      "\tfields: [",
+      "\t\t$3",
+      "\t],",
+      "},"
+    ]
+  },
+  "Sanity list of options": {
+    "description": "Add a list array to string/number/array types to render specific options to users.\n🚨 For arrays, this only works if it's an array of strings, in which case it'll render checkboxes",
+    "prefix": "sanityListArray",
+    "body": [
+      "options: {",
+      "\tlayout: '${3|radio,select|}',",
+      "\tlist: [",
+      "\t\t{ value: '${1:option1}', title: '${2:${1/(^.)|([A-Z](?=[a-z]))/${1:/upcase}${2:+ }${2:/downcase}/g}}' },",
+      "\t],",
+      "},"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+    "print to console": {
+        "prefix": ["puts"],
+        "body": [
+            "puts($1)"
+        
+        ],
+        "description": "Output to conlsoe"
+    },
+    "main": {
+        "prefix": ["main"],
+        "body": [
+            "proc main(){",
+            "   $0",
+            "}"
+
+        
+        ],
+        "description": "Main procession"
+    },
+    "proc": {
+        "prefix": ["proc"],
+        "body": [
+            "proc $0{",
+            "   ",
+            "}"
+
+        
+        ],
+        "description": "Procession"
+    },
+    "if" : {
+        "prefix": ["if"],
+        "body": [
+            "if $0{",
+            " ",
+            "}"
+        ],
+        "description": "if statement"
+    },
+    "elif" : {
+        "prefix": ["elif"],
+        "body": [
+            "elif $0{",
+            " ",
+            "}"
+        ],
+        "description": "elif statement"
+    },
+    "for" : {
+        "prefix": ["for"],
+        "body": [
+            "for $0{",
+            " ",
+            "}"
+        ],
+        "description": "for cycle"
+    },
+    "else" : {
+        "prefix": ["else"],
+        "body": [
+            "else{",
+            "   $0",
+            "}"
+        ],
+        "description": "else statement"
+    },
+    "input" : {
+        "prefix": ["insert"],
+        "body": [
+            "insert($1) "
+        ],
+        "description": "Input to console"
+    },
+    "input_int" : {
+        "prefix": ["insert.int"],
+        "body": [
+            "int(insert($1)) "
+        ],
+        "description": "Input an inter to console"
+    },
+    "append" : {
+        "prefix": ["append"],
+        "body": [
+            "append($1) "
+        ],
+        "description": "To add a element into an array variable"
+    },
+    "pop" : {
+        "prefix": ["pop"],
+        "body": [
+            "pop($1) "
+        ],
+        "description": "To remove a element into an array variable"
+    }
+    
+}
