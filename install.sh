@@ -23,3 +23,4 @@ echo "Installazione dei dotfiles completata."
 # Link per i file nella home
 ln -sfv "$DOTFILES_DIR/.zshrc" "/home/chris/.zshrc"
 ln -sfv "$DOTFILES_DIR/rofi" "/home/chris/.config/rofi"
+ln -sfv "$DOTFILES_DIR/.config" "/home/chris/.config/.config"

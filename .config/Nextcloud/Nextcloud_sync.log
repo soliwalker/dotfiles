@@ -1,0 +1,24 @@
+/home/chris/Nextcloud/
+# timestamp | duration | file | instruction | dir | modtime | etag | size | fileId | status | errorString | http result code | other size | other modtime | X-Request-ID
+#=#=#=# Syncrun started 2025-08-25T09:55:58Z
+#=#=#=#=# Propagation starts 2025-08-25T09:55:58Z (last step: 44 msec, total: 44 msec)
+09:55:58||Nextcloud intro.mp4|8|2|1756115541|5fd191a02b2ae2f571cf0419a09dd641|3963036|00000047ocu86wagh9br|13||200|0|0|4304d791-42c1-4235-a2fb-9e2c35563034|
+09:55:58||Nextcloud Manual.pdf|8|2|1756115539|0f952b5b14895fc935b284cc404c8ea5|13954180|00000008ocu86wagh9br|13||200|0|0|0401bac0-e8bb-44f4-a14f-37433f01adc7|
+09:55:58||Nextcloud.png|8|2|1756115539|e263cece5415f3b0412676df87039296|50598|00000009ocu86wagh9br|13||200|0|0|7b7bb7fe-d64b-4c83-9bd6-69a63a78c52a|
+09:55:58||Readme.md|8|2|1756115541|3c8f35610a66bcea27a49607ab6ab011|197|00000046ocu86wagh9br|13||200|0|0|1cad0b9e-903e-454b-bdb1-c55211e15c57|
+09:55:58||Reasons to use Nextcloud.pdf|8|2|1756115541|5f5a117751370b71180d9802fa222150|976625|00000045ocu86wagh9br|13||200|0|0|515b5683-afdc-426f-98aa-96c49f7f587f|
+09:55:58||Templates credits.md|8|2|1756115541|1d31fcda2d3191ff9baf63378ff47191|2403|00000044ocu86wagh9br|13||200|0|0|1215b011-7d99-4c1f-be69-5a2308cc3fb6|
+#=#=#=# Syncrun finished 2025-08-25T09:55:58Z (last step: 175 msec, total: 220 msec)
+#=#=#=# Syncrun started 2025-08-25T09:56:31Z
+#=#=#=#=# Propagation starts 2025-08-25T09:56:31Z (last step: 40 msec, total: 40 msec)
+09:56:31||Nextcloud intro.mp4|2|1|1756115541|5fd191a02b2ae2f571cf0419a09dd641|3963036|00000047ocu86wagh9br|13||204|3963036|1756115541|3f08bdc8-7d9d-4711-a039-376cfcb206f7|
+09:56:31||Nextcloud Manual.pdf|2|1|1756115539|0f952b5b14895fc935b284cc404c8ea5|13954180|00000008ocu86wagh9br|13||204|13954180|1756115539|006ff1b3-1698-48c0-a645-e8c66cec0332|
+09:56:31||Readme.md|2|1|1756115541|3c8f35610a66bcea27a49607ab6ab011|197|00000046ocu86wagh9br|13||204|197|1756115541|9aa733a6-081a-4357-99a0-1e1181028045|
+09:56:31||Reasons to use Nextcloud.pdf|2|1|1756115541|5f5a117751370b71180d9802fa222150|976625|00000045ocu86wagh9br|13||204|976625|1756115541|24726b45-3762-469c-9fcc-a8700fbb34bf|
+09:56:31||Nextcloud.png|2|1|1756115539|e263cece5415f3b0412676df87039296|50598|00000009ocu86wagh9br|13||204|50598|1756115539|6861b31a-0140-4c40-9866-fa0cbd478eed|
+09:56:31||Templates credits.md|2|1|1756115541|1d31fcda2d3191ff9baf63378ff47191|2403|00000044ocu86wagh9br|13||204|2403|1756115541|99631bb4-3286-4169-b41a-dde0c31c0ab7|
+#=#=#=# Syncrun finished 2025-08-25T09:56:31Z (last step: 168 msec, total: 208 msec)
+#=#=#=# Syncrun started 2025-08-25T09:57:18Z
+#=#=#=#=# Propagation starts 2025-08-25T09:57:18Z (last step: 72 msec, total: 72 msec)
+||Scrivania|8|2|1756115820|68ac336c10215|0|00000182ocu86wagh9br|13||0|0|0||
+#=#=#=# Syncrun finished 2025-08-25T09:57:18Z (last step: 16 msec, total: 88 msec)

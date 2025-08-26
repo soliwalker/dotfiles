@@ -1,0 +1,12 @@
+
+# High DPI settings for Dell Precision 5550
+font:
+  size: 14.0  # Larger font for 4K display
+
+window:
+  decorations: none
+  opacity: 0.95
+  
+# Better for high DPI touchscreen
+mouse:
+  hide_when_typing: true

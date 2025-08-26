@@ -1,0 +1,8 @@
+[General]
+isVfsEnabled=false
+launchOnSystemStartup=false
+optionalServerNotifications=false
+promptDeleteAllFiles=false
+showCallNotifications=false
+showChatNotifications=false
+showInExplorerNavigationPane=false

@@ -1,0 +1,46 @@
+[Data Source]
+DisplayName=Chris (Work)
+Enabled=true
+Parent=
+
+[Authentication]
+Host=
+Method=OAuth2
+Port=0
+ProxyUid=system-proxy
+RememberPassword=true
+User=
+CredentialName=
+IsExternal=true
+
+[Collection]
+BackendName=google
+CalendarEnabled=true
+ContactsEnabled=true
+Identity=me@chrisfior.co
+MailEnabled=true
+AllowSourcesRename=false
+CalendarUrl=
+ContactsUrl=
+
+[GNOME Online Accounts]
+AccountId=account_1756205064_1
+CalendarUrl=https://apidata.googleusercontent.com/caldav/v2/me@chrisfior.co/user
+ContactsUrl=https://www.googleapis.com/.well-known/carddav
+Name=
+Address=me@chrisfior.co
+
+[WebDAV Backend]
+AvoidIfmatch=false
+CalendarAutoSchedule=false
+Color=
+DisplayName=
+EmailAddress=
+ResourcePath=
+ResourceQuery=
+SslTrust=
+Order=4294967295
+Timeout=90
+
+[Security]
+Method=none

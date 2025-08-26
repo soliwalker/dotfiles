@@ -1,0 +1,34 @@
+/run/media/chris/Vault/NextCloud/
+# timestamp | duration | file | instruction | dir | modtime | etag | size | fileId | status | errorString | http result code | other size | other modtime | X-Request-ID
+#=#=#=# Syncrun started 2025-08-24T12:59:43Z
+#=#=#=#=# Propagation starts 2025-08-24T12:59:43Z (last step: 276 msec, total: 276 msec)
+#=#=#=# Syncrun finished 2025-08-24T12:59:43Z (last step: 78 msec, total: 354 msec)
+#=#=#=# Syncrun started 2025-08-24T13:35:03Z
+#=#=#=#=# Propagation starts 2025-08-24T13:35:05Z (last step: 2235 msec, total: 2235 msec)
+13:35:05||Desktop|8|1|1756042501||0|00000151ocwp0xgcf762|13|Errore sconosciuto|201|0|0|491b415b-459f-4255-95bb-44c7cb9e8f71|
+#=#=#=# Syncrun finished 2025-08-24T13:35:05Z (last step: 516 msec, total: 2752 msec)
+#=#=#=# Syncrun started 2025-08-24T13:35:08Z
+#=#=#=#=# Propagation starts 2025-08-24T13:35:19Z (last step: 10834 msec, total: 10834 msec)
+13:35:19||Documenti|8|1|1756042505||0|00000152ocwp0xgcf762|13|Errore sconosciuto|201|0|0|7b0b9001-c478-49e8-89d1-74842fd9d9b0|
+#=#=#=# Syncrun finished 2025-08-24T13:35:19Z (last step: 418 msec, total: 11253 msec)
+#=#=#=# Syncrun started 2025-08-24T13:35:25Z
+#=#=#=#=# Propagation starts 2025-08-24T13:35:35Z (last step: 10770 msec, total: 10770 msec)
+13:35:36||Scaricati|8|1|1756042518||0|00000154ocwp0xgcf762|13|Errore sconosciuto|201|0|0|6d0dfb70-fded-4dec-914e-40e634bcdcdd|
+13:35:36||Video|8|1|1756042514||0|00000155ocwp0xgcf762|13|Errore sconosciuto|201|0|0|75899c67-d46c-4ad2-a76e-cce19c93c21c|
+13:35:36||Immagini|8|1|1756042511||0|00000153ocwp0xgcf762|13|Errore sconosciuto|201|0|0|d9dca1fd-891c-4440-871e-352274e1e815|
+#=#=#=# Syncrun finished 2025-08-24T13:35:37Z (last step: 1952 msec, total: 12723 msec)
+#=#=#=# Syncrun started 2025-08-24T13:35:43Z
+#=#=#=#=# Propagation starts 2025-08-24T13:35:46Z (last step: 2662 msec, total: 2662 msec)
+#=#=#=# Syncrun finished 2025-08-24T13:35:46Z (last step: 21 msec, total: 2684 msec)
+#=#=#=# Syncrun started 2025-08-24T13:35:48Z
+#=#=#=#=# Propagation starts 2025-08-24T13:35:49Z (last step: 591 msec, total: 591 msec)
+#=#=#=# Syncrun finished 2025-08-24T13:35:49Z (last step: 22 msec, total: 613 msec)
+#=#=#=# Syncrun started 2025-08-24T13:35:51Z
+#=#=#=#=# Propagation starts 2025-08-24T13:35:55Z (last step: 3500 msec, total: 3500 msec)
+#=#=#=# Syncrun finished 2025-08-24T13:35:55Z (last step: 24 msec, total: 3524 msec)
+#=#=#=# Syncrun started 2025-08-24T13:35:58Z
+#=#=#=#=# Propagation starts 2025-08-24T13:35:59Z (last step: 1395 msec, total: 1395 msec)
+#=#=#=# Syncrun finished 2025-08-24T13:35:59Z (last step: 22 msec, total: 1417 msec)
+#=#=#=# Syncrun started 2025-08-24T13:36:01Z
+#=#=#=#=# Propagation starts 2025-08-24T13:36:02Z (last step: 1376 msec, total: 1376 msec)
+#=#=#=# Syncrun finished 2025-08-24T13:36:02Z (last step: 22 msec, total: 1399 msec)

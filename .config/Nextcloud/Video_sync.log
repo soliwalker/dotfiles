@@ -1,0 +1,12 @@
+/home/chris/Video/
+# timestamp | duration | file | instruction | dir | modtime | etag | size | fileId | status | errorString | http result code | other size | other modtime | X-Request-ID
+#=#=#=# Syncrun started 2025-08-24T13:45:17Z
+#=#=#=#=# Propagation starts 2025-08-24T13:45:25Z (last step: 7683 msec, total: 7683 msec)
+13:45:25||Video|8|1|1756034405||0|00000198ocwp0xgcf762|13|Errore sconosciuto|201|0|0|4ec413eb-3085-40bf-a7af-da4dc6ecba46|
+#=#=#=# Syncrun finished 2025-08-24T13:45:25Z (last step: 416 msec, total: 8100 msec)
+#=#=#=# Syncrun started 2025-08-24T13:46:16Z
+#=#=#=#=# Propagation starts 2025-08-24T13:46:34Z (last step: 17701 msec, total: 17701 msec)
+#=#=#=# Syncrun finished 2025-08-24T13:46:34Z (last step: 7 msec, total: 17708 msec)
+#=#=#=# Syncrun started 2025-08-24T13:46:45Z
+#=#=#=#=# Propagation starts 2025-08-24T13:46:45Z (last step: 290 msec, total: 290 msec)
+#=#=#=# Syncrun finished 2025-08-24T13:46:45Z (last step: 6 msec, total: 297 msec)

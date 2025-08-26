@@ -1,0 +1,46 @@
+[Data Source]
+DisplayName=chris@localhost/nextcloud
+Enabled=true
+Parent=
+
+[Authentication]
+Host=
+Method=none
+Port=0
+ProxyUid=system-proxy
+RememberPassword=true
+User=
+CredentialName=
+IsExternal=true
+
+[Collection]
+BackendName=webdav
+CalendarEnabled=true
+ContactsEnabled=true
+Identity=chris
+MailEnabled=true
+AllowSourcesRename=false
+CalendarUrl=
+ContactsUrl=
+
+[GNOME Online Accounts]
+AccountId=account_1756205143_2
+CalendarUrl=http://chris@localhost/nextcloud/remote.php/dav
+ContactsUrl=http://chris@localhost/nextcloud/remote.php/dav
+Name=
+Address=
+
+[WebDAV Backend]
+AvoidIfmatch=false
+CalendarAutoSchedule=false
+Color=
+DisplayName=
+EmailAddress=
+ResourcePath=
+ResourceQuery=
+SslTrust=
+Order=4294967295
+Timeout=90
+
+[Security]
+Method=none

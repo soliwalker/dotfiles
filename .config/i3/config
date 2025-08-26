@@ -1,0 +1,11 @@
+
+# High DPI configuration for Dell Precision 5550
+exec_always --no-startup-id xrandr --output eDP-1 --mode 3840x2400 --rate 60
+exec_always --no-startup-id xrdb -merge ~/.Xresources
+
+# Cursor size for high DPI
+exec_always --no-startup-id xsetroot -cursor_name left_ptr
+
+# Font scaling
+font pango:JetBrains Mono 12
+

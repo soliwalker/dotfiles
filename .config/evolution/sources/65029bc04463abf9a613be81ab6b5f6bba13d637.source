@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=Chris (Work)
+Enabled=true
+Parent=9cc70e4c317640a63077535c52585972092eeb9d
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=12fd4cc89993a4bf8fb7486a1ecbaa5823cabc13
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://local/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=me@chrisfior.co
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none
