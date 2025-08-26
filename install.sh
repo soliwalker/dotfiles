@@ -20,3 +20,5 @@ ln -sfv "$DOTFILES_DIR/sway" ~/.config/sway
 # Esempio: ln -sfv "$DOTFILES_DIR/alacritty" ~/.config/alacritty
 
 echo "Installazione dei dotfiles completata."
+# Link per i file nella home
+ln -sfv "$DOTFILES_DIR/.zshrc" "/home/chris/.zshrc"
