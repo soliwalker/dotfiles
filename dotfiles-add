@@ -7,15 +7,10 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-# Il percorso completo del file/cartella da aggiungere (es. ~/.config/alacritty)
 SOURCE_PATH=$1
-# Il solo nome del file/cartella (es. alacritty)
 BASENAME=$(basename "$SOURCE_PATH")
-# La directory dei dotfiles
 DOTFILES_DIR=~/.dotfiles
-# La destinazione all'interno della cartella dotfiles
 DEST_PATH="$DOTFILES_DIR/$BASENAME"
-# Lo script di installazione
 INSTALL_SCRIPT="$DOTFILES_DIR/install.sh"
 
 # --- PASSO 1: Sposta il file/cartella ---
@@ -28,7 +23,6 @@ fi
 
 # --- PASSO 2: Crea il link simbolico ---
 echo "2. Creazione del link simbolico..."
-# Determina se il link va in ~/.config o in ~/
 if [[ "$SOURCE_PATH" == *".config"* ]]; then
     LINK_TARGET_DIR=~/.config
 else
@@ -38,25 +32,30 @@ ln -sfv "$DEST_PATH" "$LINK_TARGET_DIR/$BASENAME"
 
 # --- PASSO 3: Aggiorna lo script install.sh ---
 echo "3. Aggiunta del nuovo link allo script 'install.sh'..."
-# Costruisci la riga di codice da aggiungere allo script
 LINK_COMMAND="ln -sfv \"\$DOTFILES_DIR/$BASENAME\" \"$LINK_TARGET_DIR/$BASENAME\""
-
-# Aggiungi la riga allo script install.sh (senza creare duplicati)
 if ! grep -qF "$LINK_COMMAND" "$INSTALL_SCRIPT"; then
-    # Aggiunge un commento per separare le sezioni
-    if [[ "$LINK_TARGET_DIR" == *".config"* ]]; then
-        echo "# Link per le cartelle di configurazione" >> "$INSTALL_SCRIPT"
-    else
-        echo "# Link per i file nella home" >> "$INSTALL_SCRIPT"
-    fi
     echo "$LINK_COMMAND" >> "$INSTALL_SCRIPT"
     echo "Script 'install.sh' aggiornato con successo."
 else
     echo "Il comando per '$BASENAME' era già presente in 'install.sh'."
 fi
 
-echo -e "\nFatto! Ora devi solo fare il commit delle modifiche:"
-echo "  cd ~/.dotfiles"
-echo "  git add ."
-echo "  git commit -m \"Add $BASENAME config\""
-echo "  git push"
+# --- NUOVA PARTE: Chiedi conferma per il commit e push ---
+echo "" # Aggiunge una linea vuota per leggibilità
+read -p "Vuoi fare il commit e il push delle modifiche ora? (y/n) " -n 1 -r
+echo "" # Va a capo dopo l'input
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "OK. Procedo con il commit e il push..."
+    cd "$DOTFILES_DIR"
+    git add .
+    git commit -m "Add $BASENAME config"
+    git push
+    echo "Sincronizzazione con GitHub completata."
+else
+    echo "OK. Ricordati di fare il commit manualmente più tardi:"
+    echo "  cd ~/.dotfiles"
+    echo "  git add ."
+    echo "  git commit -m \"Add $BASENAME config\""
+    echo "  git push"
+fi

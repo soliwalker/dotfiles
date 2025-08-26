@@ -1,0 +1,4 @@
+configuration {
+    dpi: 192;
+    font: "JetBrains Mono 14";
+}

@@ -22,3 +22,4 @@ ln -sfv "$DOTFILES_DIR/sway" ~/.config/sway
 echo "Installazione dei dotfiles completata."
 # Link per i file nella home
 ln -sfv "$DOTFILES_DIR/.zshrc" "/home/chris/.zshrc"
+ln -sfv "$DOTFILES_DIR/rofi" "/home/chris/.config/rofi"
