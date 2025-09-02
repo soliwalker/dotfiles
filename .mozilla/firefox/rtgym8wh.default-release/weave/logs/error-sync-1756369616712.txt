@@ -1,0 +1,90 @@
+1756369278202	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1756369586212	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1756369586212	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1756369586214	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1756369586216	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1756369590591	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1756369592083	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1756369614574	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1756369614574	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1756369614577	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1756369614578	Sync.Service	DEBUG	User-Agent: Firefox/142.0 (Linux x86_64) FxSync/1.144.0.20250818081258.desktop
+1756369614578	Sync.Service	INFO	Starting sync at 2025-08-28 10:26:54 in browser session 8MgcTmWLtR5A
+1756369614578	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1756369614579	Sync.Status	INFO	Resetting Status.
+1756369614579	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1756369614580	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1756369614580	FirefoxAccounts	DEBUG	getOAuthToken enter
+1756369614580	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1756369614580	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1756369614580	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1756369615056	Services.Common.RESTRequest	DEBUG	GET https://profile.accounts.firefox.com/v1/profile 304
+1756369615080	Sync.Resource	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/197106278/info/collections
+1756369615081	Sync.Service	DEBUG	Fetching server configuration: https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/197106278/info/configuration
+1756369615081	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1756369615353	Sync.Resource	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/197106278/info/configuration
+1756369615353	Sync.Service	DEBUG	Fetching global metadata record
+1756369615353	Sync.Service	DEBUG	Weave Version: 1.144.0 Local Storage: 5 Remote Storage: 5
+1756369615353	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1756369615353	Sync.Service	INFO	Testing info/collections: {"prefs":1756368214.17,"clients":1756367078.63,"crypto":1653414845.59,"passwords":1756367081.45,"bookmarks":1756367086.71,"forms":1756367175.21,"history":1756368823.44,"extension-storage":1732049211.21,"creditcards":1753689276.96,"meta":1653414856.16,"addons":1756367182.72,"tabs":1756369277.99}
+1756369615353	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 1653414845.59
+1756369615353	Sync.Synchronizer	DEBUG	Refreshing client list.
+1756369615353	Sync.Engine.Clients	DEBUG	Resetting clients last sync time
+1756369615354	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1756369615933	Sync.Collection	DEBUG	GET success 200 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/197106278/storage/clients?full=1&limit=1000
+1756369615941	Sync.Engine.Clients	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 5 reconciled.
+1756369615941	Sync.Engine.Clients	DEBUG	Refreshing the known stale clients list
+1756369615941	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/open-uri
+1756369615941	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/close-uri/v1
+1756369615942	Sync.Engine.Clients	INFO	Hiding stale client iJfTy2XVsQFK - in known stale clients list
+1756369615943	Sync.Engine.Clients	INFO	Uploading 0 outgoing records
+1756369615945	Sync.Synchronizer	INFO	Updating enabled engines: 4 clients.
+1756369615947	Sync.Synchronizer	INFO	Syncing all enabled engines.
+1756369615948	Sync.Engine.Prefs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1756369615949	Sync.Engine.Prefs	INFO	Uploading 0 outgoing records
+1756369616218	Sync.Engine.Passwords	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1756369616218	Sync.Engine.Passwords	INFO	Uploading 0 outgoing records
+1756369616219	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/open-uri
+1756369616220	FirefoxAccounts	TRACE	Getting command keys: https://identity.mozilla.com/cmd/close-uri/v1
+1756369616222	Sync.Engine.Tabs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1756369616223	Sync.Engine.Tabs	INFO	Uploading 1 outgoing records
+1756369616225	Sync.Engine.Tabs	INFO	Posting 1 records of 963 bytes with batch=true
+1756369616226	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1756369616227	Sync.Collection	DEBUG	POST Length: 963
+1756369616707	Sync.Collection	DEBUG	POST fail 503 https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/197106278/storage/tabs?batch=true&commit=true
+1756369616707	Sync.Collection	WARN	POST request to https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/197106278/storage/tabs?batch=true&commit=true failed with status 503
+1756369616707	Sync.Engine.Tabs	DEBUG	Uploading records failed: 503
+1756369616708	Sync.Status	DEBUG	Status for engine tabs: error.engine.reason.record_upload_fail
+1756369616708	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed_partial
+1756369616708	Sync.Collection	WARN	Got exception parsing response body: SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data(resource://services-sync/resource.sys.mjs:220:21) JS Stack trace: _processResponse/<@resource.sys.mjs:220:21
+format@Log.sys.mjs:639:19
+formatText@Log.sys.mjs:568:44
+format@Log.sys.mjs:586:12
+append@Log.sys.mjs:679:37
+append@LogManager.sys.mjs:147:44
+log@Log.sys.mjs:376:16
+debug@Log.sys.mjs:396:10
+observe@policies.sys.mjs:872:21
+observe@observers.sys.mjs:131:21
+notify@observers.sys.mjs:83:18
+notify@util.sys.mjs:183:19
+WrappedNotify@util.sys.mjs:193:17
+1756369616708	Sync.Collection	DEBUG	Parse fail: Response body starts: <html>
+<head><title>503 Service Unavailable</title></head>
+<body bgcolor="white">
+<center><h1>503 Se
+1756369616708	Sync.ErrorHandler	DEBUG	tabs failed: ({data:"<html>\n<head><title>503 Service Unavailable</title></head>\n<body bgcolor=\"white\">\n<center><h1>503 Service Cloudy: Try again later. </h1></center>\n</body>\n</html>\n", url:"https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/197106278/storage/tabs?batch=true&commit=true", status:503, success:false, headers:{'accept-ranges':"bytes", 'content-length':"162", 'content-type':"text/html", date:"Thu, 28 Aug 2025 08:26:56 GMT", etag:"\"68aff096-a2\"", server:"nginx/1.22.0", via:"1.1 google, 1.1 varnish, 1.1 varnish", 'x-cache':"MISS, MISS", 'x-cache-hits':"0, 0", 'x-firefox-spdy':"h2", 'x-served-by':"cache-mxp6961-MXP, cache-mxp6947-MXP", 'x-timer':"S1756369616.341800,VS0,VE231"}, get obj() {
+    [native code]
+}, failureCode:"error.engine.reason.record_upload_fail"})
+1756369616709	Sync.Synchronizer	INFO	Aborting sync for failure in tabs
+1756369616709	Sync.Doctor	INFO	Skipping check of prefs - disabled via preferences
+1756369616709	Sync.Doctor	INFO	Skipping check of passwords - disabled via preferences
+1756369616709	Sync.Doctor	INFO	Skipping validation: no engines qualify
+1756369616709	Sync.Synchronizer	INFO	Sync completed at 2025-08-28 10:26:56 after 2.13 secs.
+1756369616709	Sync.Declined	DEBUG	Handling remote declined: []
+1756369616709	Sync.Declined	DEBUG	Handling local declined: []
+1756369616709	Sync.Declined	DEBUG	Declined changed? false
+1756369616710	Sync.Service	INFO	No change to declined engines. Not reuploading meta/global.
+1756369616710	Sync.ErrorHandler	ERROR	Some engines did not sync correctly.
+1756369616710	Sync.SyncScheduler	DEBUG	Starting client-initiated backoff. Next sync in 1481444 ms.
+1756369616710	Sync.SyncScheduler	DEBUG	Next sync in 1481444 ms. (why=client-backoff-schedule)

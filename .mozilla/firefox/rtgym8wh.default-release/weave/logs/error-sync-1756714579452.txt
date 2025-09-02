@@ -1,0 +1,21 @@
+1756714186382	Sync.LogManager	DEBUG	Flushing file log
+1756714186382	Services.Common.RESTRequest	DEBUG	GET https://profile.accounts.firefox.com/v1/profile failed: 2152398878 - NS_ERROR_UNKNOWN_HOST
+1756714186382	FirefoxAccounts	ERROR	Background refresh of profile failed: {"name":"FxAccountsProfileClientError","code":null,"errno":998,"error":"NETWORK_ERROR","message":"[Exception... \"NS_ERROR_UNKNOWN_HOST\"  nsresult: \"0x804b001e (NS_ERROR_UNKNOWN_HOST)\"  location: \"JS frame :: resource://services-common/rest.sys.mjs :: onStopRequest :: line 478\"  data: no]"}
+1756714186383	Sync.LogManager	DEBUG	Log cleanup threshold time: 1755850186383
+1756714186384	Sync.LogManager	DEBUG	Done deleting files.
+1756714278815	Sync.Service	DEBUG	User-Agent: Firefox/142.0 (Linux x86_64) FxSync/1.144.0.20250818081258.desktop
+1756714278815	Sync.Service	INFO	Starting sync at 2025-09-01 10:11:18 in browser session YwKi1OBOWzel
+1756714278815	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1756714278816	Sync.Status	INFO	Resetting Status.
+1756714278816	Sync.Status	DEBUG	Status.service: error.sync.failed => success.status_ok
+1756714278816	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1756714579448	Sync.Resource	ERROR	Request timed out after 300000ms. Aborting.
+1756714579448	Sync.Resource	WARN	GET request to https://sync-1-us-west1-g.sync.services.mozilla.com/1.5/197106278/info/collections failed: AbortError: The operation was aborted.  Stack trace: _doRequest/timeoutId<()@resource://services-sync/resource.sys.mjs:179
+notify()@resource://gre/modules/Timer.sys.mjs:66
+1756714579448	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1756714579449	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed
+1756714579449	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "Request aborted (timeout)"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "JS frame :: resource://services-sync/resource.sys.mjs :: _doRequest :: line 189"  data: no] Stack trace: _doRequest()@resource://services-sync/resource.sys.mjs:189
+1756714579449	Sync.SyncScheduler	DEBUG	Sync error count has exceeded 3; enforcing backoff.
+1756714579449	Sync.SyncScheduler	DEBUG	Starting client-initiated backoff. Next sync in 3011268 ms.
+1756714579449	Sync.SyncScheduler	DEBUG	Next sync in 3011268 ms. (why=client-backoff-schedule)
+1756714579451	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "Request aborted (timeout)"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "JS frame :: resource://services-sync/resource.sys.mjs :: _doRequest :: line 189"  data: no] Stack trace: _doRequest()@resource://services-sync/resource.sys.mjs:189
