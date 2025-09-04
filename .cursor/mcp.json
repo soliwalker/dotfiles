@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "docker-mcp": {
+      "command": "docker",
+      "args": ["run", "--rm", "-i", "-v", "/home/chris/Code:/workspace", "mcp/filesystem"],
+      "type": "stdio"
+    }
+  }
+}
