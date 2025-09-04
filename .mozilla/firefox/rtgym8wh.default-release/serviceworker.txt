@@ -1,13 +1,13 @@
 10
 
 https://chat.google.com/
-https://chat.google.com/serviceworker.js?xhrRoot=%2Fu%2F0%2F_%2FDynamiteWebUi&mssRowKey=boq-dynamite.DynamiteWebUi.it.DnNMN4QfzbM.2020.O&buildLabel=boq_dynamiteuiserver_20250821.00_p0
+https://chat.google.com/serviceworker.js?xhrRoot=%2Fu%2F0%2F_%2FDynamiteWebUi&mssRowKey=boq-dynamite.DynamiteWebUi.it.rMn8aF21W_I.2020.O&buildLabel=boq_dynamiteuiserver_20250827.04_p0
 true
-{78587938-b868-4f77-9b20-2fb7b4caaf50}
+{2ef20de1-f393-45ec-aa4b-1dd7629b8272}
 0
-1756270043905222
-1756270043997037
-1756222853994556
+1756985978436748
+1756985978441183
+1756985978305744
 1
 true
 0
@@ -27,13 +27,13 @@ true
 #
 
 https://meet.google.com/
-https://meet.google.com/meetsw.js?xhrRoot=%2F_%2FMeetingsUi&mssRowKey=boq-rtc.MeetingsUi_j2kt.it.Q00e2XH9CxU.2020.O&buildLabel=boq_meetingsuiserver_20250821.08_p0
+https://meet.google.com/meetsw.js?xhrRoot=%2F_%2FMeetingsUi&mssRowKey=boq-rtc.MeetingsUi_j2kt.it.rNoQ0gWDIaQ.2020.O&buildLabel=boq_meetingsuiserver_20250827.05_p2
 true
-{41c7ad89-2270-4825-b638-f6d67602efe4}
+{95480893-4b7c-4ab6-b1e1-6d9f86a2caec}
 0
-1756270066536417
-1756270066558995
-1756222874407153
+1756986024090361
+1756986024099007
+1756986022929673
 1
 true
 0
@@ -192,5 +192,18 @@ false
 1756364948962959
 1
 {"r":1026431109}
+0
+#
+^partitionKey=%28https%2Cchiesacattolica.it%29
+https://www.bibbiaedu.it/
+https://www.bibbiaedu.it/service-worker.php
+true
+{958ae7a8-16cd-48e4-881c-9304566063d8}
+0
+1756982580063474
+1756982580064242
+1756982579393779
+0
+true
 0
 #

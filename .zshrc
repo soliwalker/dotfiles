@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="jonathan"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,8 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose node npm python conda)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -104,3 +103,80 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export VISUAL=nano
 export EDITOR=nano
+# Personalizzazione del prompt per Zsh
+# Funzione per mostrare il branch di Git
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/( \1)/'
+}
+
+# Definizione del prompt (PS1)
+PROMPT="%F{green}%n%F{white}@%F{cyan}%m%F{white}:%F{yellow}%c%F{red}\$(parse_git_branch)%F{white}$ "
+alias docker="podman"
+alias docker-compose="podman-compose"
+alias docker="podman"
+alias docker-compose="podman-compose"
+alias docker="podman"
+alias docker-compose="podman-compose"
+alias mcp-start="~/Code/configs/mcp/start-mcp-servers.sh"
+alias mcp-stop="docker stop \$(docker ps -q --filter name=mcp-*)"
+alias mcp-status="docker ps --filter name=mcp-*"
+alias mcp-list="claude mcp list"
+export ANTHROPIC_API_KEY="sk-ant-api03-mE4jeosa6KEMBQkNnTesq_jp8rpXn2a6kkeKPO_L-PeDU9BuLIBoRhNQ6ZBaGqiquOB0rzuLIpKJuT2KV9AZDQ-z3aCSAwAA"
+
+# === Development Environment Setup ===
+export CODE_DIR="$HOME/Code"
+
+# Aliases per sviluppo
+alias code-dir="cd $CODE_DIR"
+alias dev-start="$CODE_DIR/tools/scripts/dev-env.sh start"
+alias dev-stop="$CODE_DIR/tools/scripts/dev-env.sh stop"
+alias dev-restart="$CODE_DIR/tools/scripts/dev-env.sh restart"
+alias dev-status="$CODE_DIR/tools/scripts/dev-env.sh status"
+alias dev-logs="$CODE_DIR/tools/scripts/dev-env.sh logs"
+
+# Editor shortcuts
+alias c="cursor"
+alias c.="cursor ."
+
+# Claude Code shortcuts  
+alias cc="claude"
+alias cc-help="claude --help"
+
+# Docker/Podman shortcuts
+alias d="docker"
+alias dc="docker-compose"
+alias dps="docker ps"
+alias dl="docker logs"
+
+# Quick project creation
+function new-project() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: new-project <project-name> [ai|web|api]"
+        return 1
+    fi
+    
+    local project_name=$1
+    local project_type=${2:-web}
+    local project_path="$CODE_DIR/${project_type}-projects/$project_name"
+    
+    mkdir -p "$project_path"
+    cd "$project_path"
+    
+    git init
+    echo "# $project_name" > README.md
+    mkdir -p {src,tests,docs,config}
+    
+    cursor .
+    echo "✅ Progetto $project_name creato in $project_path"
+}
+
+# Quick navigation to projects
+function goto-project() {
+    local project=$(find $CODE_DIR -maxdepth 3 -type d -name "*$1*" | head -1)
+    if [[ -n "$project" ]]; then
+        cd "$project"
+        echo "📂 $project"
+    else
+        echo "❌ Project not found: $1"
+    fi
+}
